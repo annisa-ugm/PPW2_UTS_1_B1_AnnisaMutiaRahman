@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pemain;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PemainController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    public function pemain(){
+        $pemains = Pemain::all();
+        return view('pemain', compact('pemains'));
+    }
     public function index()
     {
-        return view('posts');
+        //
     }
 
     /**

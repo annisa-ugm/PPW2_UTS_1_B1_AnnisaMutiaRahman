@@ -1,10 +1,8 @@
 <?php
+
+use App\Http\Controllers\PemainController;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductController;
-Route::get('/products', [ProductController::class, 'index']);
-
-use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,32 +14,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-// Route::get('/about', function () {
-//     return view('contents.about', [
-//         "name" => "lala",
-//         "email" => "lala@gmail.com"
-//     ]);
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('contents.dashboard');
-// });
-
-// Route::get('/headerFooter', function () {
-//     return view('folderLayout.headerFooter');
-// });
-
-// Route::get('/layout', function () {
-//     return view('folderLayout.layout');
-// });
-
-// Route::get('/about', function () {
-//     return view('contents.about');
-// })->name('about');
-
-// P3
-// Route::get('/posts', function () {
-//     return view('posts');
-// });
-
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/pemain', [PemainController::class, 'pemain']);
